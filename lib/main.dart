@@ -66,8 +66,43 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: const Center(
-        child: Text('Hello, world!'),
+      body: Container(
+        alignment: Alignment.topLeft,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  height: (MediaQuery.of(context).size.height - 56) * 0.5, //Appbar 높이 뺀것..
+                  color: Colors.blue,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  height: (MediaQuery.of(context).size.height - 56) * 0.5,
+                  color: Colors.red,
+                ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  height: (MediaQuery.of(context).size.height - 56) * 0.5,
+                  color: Colors.green,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  height: (MediaQuery.of(context).size.height - 56) * 0.5,
+                  color: Colors.yellow,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => print('Clicked'),
