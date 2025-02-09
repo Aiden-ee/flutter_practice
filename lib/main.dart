@@ -78,21 +78,57 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: MediaQuery.of(context).size.width * 0.5,
                   height: (MediaQuery.of(context).size.height - 56) * 0.5, //Appbar 높이 뺀것..
                   color: Colors.blue,
+                  child: Stack(
+                    children: [
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: Colors.red,
+                      ),
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: Colors.orange,
+                        margin: const EdgeInsets.only(left: 50),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: Colors.yellow,
+                        margin: const EdgeInsets.only(left: 100),
+                      ),
+                      Container(
+                        width: 200,
+                        height: 200,
+                        color: Colors.green,
+                        margin: const EdgeInsets.only(left: 150),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.5,
                   height: (MediaQuery.of(context).size.height - 56) * 0.5,
                   color: Colors.red,
+                  child: Center(
+                    child: TextButton(
+                      onPressed: () => print("textButton clicked"),
+                      child: const Text("TextButton"),
+                    ),
+                  ) 
                 ),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.5,
-                  height: (MediaQuery.of(context).size.height - 56) * 0.5,
-                  color: Colors.green,
+                GestureDetector(
+                  onTap: () => print('GestureDetected'),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    height: (MediaQuery.of(context).size.height - 56) * 0.5,
+                    color: Colors.green,
+                  ),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.5,
